@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizando links</title>
+</head>
+<style>
+
+    /* 
+       SELETORES PERSONALIZADOS
+       # = id
+       . = class
+       : = pseudo-class
+       :: = pseudo-element
+       > = children
+    */
+
+
+    body{
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    a{
+        color: chartreuse;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    a:visited{
+        color: coral;
+    }
+
+    a:hover{
+        color: greenyellow;
+        text-decoration: underline;
+    }
+
+    a::after{
+        content: '[link]';
+        text-decoration: none;
+        font-weight: normal;
+        color: darkkhaki;
+    }
+
+    .especial::after{
+        content: '	⇐';
+    }
+
+    .especial::before{
+        content: '⇒	 ';
+    }
+</style>
+
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://github.com/OliveiraVictoria" class="especial">Repositório GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/victoriarocha20/" class="especial">Perfil Linkedin</a></li>
+        <li><a href="https://www.instagram.com/oliveira__victoria/" class="especial">Perfil Instagram</a></li>
+    </ul>
+</body>
+</html>
